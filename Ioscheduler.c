@@ -18,7 +18,7 @@ char *IOscheduler(char *data, struct PCB *ptr, int cmd){
   IOqueue[ind].cmd = cmd;
   ind++;
   int cur = ind;
-  int i = openfile(filename); //problem here
+  int i = openfile(filename); 
   if(cmd == 0){ //read
     int err = readBlock(i);
     IOqueue[cur] = (const struct request){ 0 }; //dequeue
